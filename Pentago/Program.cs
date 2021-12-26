@@ -1,8 +1,13 @@
+using Pentago.Services.Authentication;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllersWithViews();
+builder.Services.AddControllers();
+builder.Services.AddRouting(options => options.LowercaseUrls = true);
+
+builder.Services.AddScoped<ILoginService, LoginService>(_ => new LoginService(builder.Configuration.GetConnectionString("App")));
 
 var app = builder.Build();
 

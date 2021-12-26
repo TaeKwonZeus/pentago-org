@@ -2,6 +2,15 @@
 
 namespace Pentago.Services.Authentication;
 
-public interface ILoginService {
-    string Login(LoginModel model);
+/// <summary>
+/// This interface represents a login service.
+/// </summary>
+public interface ILoginService
+{
+    /// <summary>
+    /// Verifies the user and creates an API key.
+    /// </summary>
+    /// <param name="model">User data.</param>
+    /// <returns>An API key for the user.</returns>
+    string? Login(LoginModel model);
 }
