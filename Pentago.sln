@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pentago", "Pentago\Pentago.csproj", "{C55B882C-E5FD-46F0-B16C-59B78243EDED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pentago.App", "Pentago\Pentago.App.csproj", "{C55B882C-E5FD-46F0-B16C-59B78243EDED}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pentago.Services", "Pentago.Services\Pentago.Services.csproj", "{94B88F43-A5DF-4330-8F9A-81244686D84F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{C55B882C-E5FD-46F0-B16C-59B78243EDED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C55B882C-E5FD-46F0-B16C-59B78243EDED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C55B882C-E5FD-46F0-B16C-59B78243EDED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94B88F43-A5DF-4330-8F9A-81244686D84F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94B88F43-A5DF-4330-8F9A-81244686D84F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94B88F43-A5DF-4330-8F9A-81244686D84F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94B88F43-A5DF-4330-8F9A-81244686D84F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
