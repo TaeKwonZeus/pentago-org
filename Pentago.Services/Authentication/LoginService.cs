@@ -15,8 +15,10 @@ public class LoginService : ILoginService
         _connectionString = connectionString;
     }
 
-    public string? Login(LoginModel model)
+    public async Task<string?> LoginAsync(LoginModel model)
     {
+        await Task.Run(() => { });
+
         throw new NotImplementedException();
     }
 }

@@ -11,6 +11,6 @@ public interface ILoginService
     /// Verifies the user and creates an API key.
     /// </summary>
     /// <param name="model">User data.</param>
-    /// <returns>An API key for the user.</returns>
-    string? Login(LoginModel model);
+    /// <returns>The user's API key.</returns>
+    Task<string?> LoginAsync(LoginModel model);
 }
