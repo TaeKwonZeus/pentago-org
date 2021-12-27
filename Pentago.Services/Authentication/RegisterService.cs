@@ -3,19 +3,19 @@
 namespace Pentago.Services.Authentication;
 
 /// <summary>
-/// This class is a default implementation of the <see cref="ILoginService"/> interface.
+/// This class is a default implementation of the <see cref="IRegisterService"/> interface.
 /// </summary>
-/// <inheritdoc cref="ILoginService"/>
-public class LoginService : ILoginService
+/// <inheritdoc cref="IRegisterService"/>
+public class RegisterService : IRegisterService
 {
     private readonly string _connectionString;
 
-    public LoginService(string connectionString)
+    public RegisterService(string connectionString)
     {
         _connectionString = connectionString;
     }
 
-    public async Task<string?> LoginAsync(LoginModel model)
+    public async Task RegisterAsync(RegisterModel model)
     {
         await Task.Run(() => { }).ConfigureAwait(false);
 

@@ -3,6 +3,6 @@
 /// <summary>
 /// This interface represents a Pentago engine.
 /// </summary>
-public interface IEngine
+public interface IEngineService
 {
 }

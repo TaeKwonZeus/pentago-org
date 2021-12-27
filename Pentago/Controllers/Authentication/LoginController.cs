@@ -2,7 +2,7 @@
 using Pentago.Services.Authentication;
 using Pentago.Services.Authentication.Models;
 
-namespace Pentago.App.Controllers.Authentication;
+namespace Pentago.Controllers.Authentication;
 
 /// <summary>
 /// This controller represents a login endpoint.
