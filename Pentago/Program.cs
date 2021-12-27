@@ -9,7 +9,6 @@ builder.Services.AddScoped<ILoginService, LoginService>(_ => new LoginService(bu
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment()) app.UseHsts();
 
 app.UseHttpsRedirection();
