@@ -1,4 +1,5 @@
 using Pentago.Services.Authentication;
+using Pentago.Services.Engine;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,6 +7,7 @@ builder.Services.AddControllers();
 builder.Services.AddRouting(options => options.LowercaseUrls = true);
 
 builder.Services.AddScoped<ILoginService, LoginService>(_ => new LoginService(builder.Configuration.GetConnectionString("App")));
+builder.Services.AddScoped<IEngine, Engine>();
 
 var app = builder.Build();
 

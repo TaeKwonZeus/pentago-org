@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pentago.App", "Pentago\Pent
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pentago.Services", "Pentago.Services\Pentago.Services.csproj", "{94B88F43-A5DF-4330-8F9A-81244686D84F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pentago.Engine", "Pentago.Engine\Pentago.Engine.csproj", "{D671649D-14DE-4C50-9AF4-850CEEFBE787}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{94B88F43-A5DF-4330-8F9A-81244686D84F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94B88F43-A5DF-4330-8F9A-81244686D84F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94B88F43-A5DF-4330-8F9A-81244686D84F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D671649D-14DE-4C50-9AF4-850CEEFBE787}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D671649D-14DE-4C50-9AF4-850CEEFBE787}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D671649D-14DE-4C50-9AF4-850CEEFBE787}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D671649D-14DE-4C50-9AF4-850CEEFBE787}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
