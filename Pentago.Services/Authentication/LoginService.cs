@@ -3,7 +3,7 @@
 namespace Pentago.Services.Authentication;
 
 /// <summary>
-/// This class provides a default implementation of the <see cref="ILoginService"/> interface.
+/// This class is a default implementation of the <see cref="ILoginService"/> interface.
 /// </summary>
 /// <inheritdoc cref="ILoginService"/>
 public class LoginService : ILoginService
