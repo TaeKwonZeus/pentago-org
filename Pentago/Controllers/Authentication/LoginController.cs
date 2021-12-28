@@ -12,10 +12,12 @@ namespace Pentago.Controllers.Authentication;
 public class LoginController : ControllerBase
 {
     private readonly ILoginService _loginService;
+    private readonly ILogger<LoginController> _logger;
 
-    public LoginController(ILoginService loginService)
+    public LoginController(ILoginService loginService, ILogger<LoginController> logger)
     {
         _loginService = loginService;
+        _logger = logger;
     }
 
     /// <summary>
@@ -24,13 +26,25 @@ public class LoginController : ControllerBase
     /// <param name="model">Request body.</param>
     /// <returns>The user's API key.</returns>
     [HttpPost]
-    public async Task<string> Post([FromBody] LoginModel model)
+    public async Task<IActionResult> Post([FromBody] LoginModel model)
     {
-        var res = await _loginService.LoginAsync(model);
+        try
+        {
+            var res = await _loginService.LoginAsync(model);
 
-        if (res != null) return res;
+            if (res != null)
+            {
+                _logger.LogInformation("Successfully logged in user {User}", model.UsernameOrEmail);
+                return Ok(res);
+            }
 
-        Response.StatusCode = 404;
-        return "User not found";
+            return NotFound("User not found");
+        }
+        catch (Exception e)
+        {
+            _logger.LogWarning("Login failed", e);
+
+            return Problem("Internal server error: ", e.Message);
+        }
     }
 }

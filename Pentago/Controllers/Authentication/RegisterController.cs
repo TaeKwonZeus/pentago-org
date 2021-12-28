@@ -25,17 +25,18 @@ public class RegisterController : ControllerBase
     /// </summary>
     /// <param name="model">Request body.</param>
     [HttpPost]
-    public async Task Post([FromBody] RegisterModel model)
+    public async Task<IActionResult> Post([FromBody] RegisterModel model)
     {
         try
         {
             await _registerService.RegisterAsync(model);
             _logger.LogInformation("User {User} logged in", model.Username);
+            return Ok();
         }
         catch (Exception e)
         {
-            Response.StatusCode = 500;
             _logger.LogWarning("Login failed", e);
+            return Problem("Internal server error: ", e.Message);
         }
     }
 }
