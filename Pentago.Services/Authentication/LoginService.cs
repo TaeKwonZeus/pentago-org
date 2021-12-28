@@ -1,4 +1,5 @@
-﻿using Pentago.Services.Authentication.Models;
+﻿using System.Data;
+using Pentago.Services.Authentication.Models;
 
 namespace Pentago.Services.Authentication;
 
@@ -18,7 +19,6 @@ public class LoginService : ILoginService
     public async Task<string?> LoginAsync(LoginModel model)
     {
         await Task.Run(() => { }).ConfigureAwait(false);
-
         throw new NotImplementedException();
     }
 }

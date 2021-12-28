@@ -21,7 +21,7 @@ public class LoginController : ControllerBase
     /// <summary>
     /// Verifies the user and sends an API key as a response.
     /// </summary>
-    /// <param name="model">The request body.</param>
+    /// <param name="model">Request body.</param>
     /// <returns>The user's API key.</returns>
     [HttpPost]
     public async Task<string> Post([FromBody] LoginModel model)
