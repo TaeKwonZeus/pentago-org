@@ -11,12 +11,12 @@ namespace Pentago.Controllers.Authentication;
 [ApiController]
 public class LoginController : ControllerBase
 {
-    private readonly ILoginService _loginService;
+    private readonly IAuthenticationService _authenticationService;
     private readonly ILogger<LoginController> _logger;
 
-    public LoginController(ILoginService loginService, ILogger<LoginController> logger)
+    public LoginController(IAuthenticationService authenticationService, ILogger<LoginController> logger)
     {
-        _loginService = loginService;
+        _authenticationService = authenticationService;
         _logger = logger;
     }
 
@@ -30,7 +30,7 @@ public class LoginController : ControllerBase
     {
         try
         {
-            var res = await _loginService.LoginAsync(model);
+            var res = await _authenticationService.LoginAsync(model);
 
             if (res != null)
             {
